@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    /* --bodycolor : rgb(63, 194, 150); */
+    /* background-color: var(--divcolor); can not access child varibale*/
+    background-color: var(--bodycolor);
+    background-color: var(--bodycolor, yellow); /*define value on demand*/
+}
+
+div#boxmodel{
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    margin: 15px;
+    border: violet 5px solid;
+}
+
+div#varibale{
+    width: 200px;
+    height: 50px;
+    --divcolor:green;
+    background-color: var(--divcolor);
+    font-size: calc(20px + 5vw); /*dynaic calculation*/
+}

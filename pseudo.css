@@ -1,0 +1,64 @@
+html{
+    --bodycolor : green;
+    --standard-font-size:20px;
+}
+
+body{
+    background-color: var(--bodycolor);
+    font-size: var(--standard-font-size);
+}
+
+h1{
+    font-size: calc(20px + 2em);
+}
+
+li{
+    background-color: black;
+    color: white;
+}
+li:hover{
+    background-color: violet;
+    color: crimson;
+}
+ul li:nth-child(2n){ /*calculate 2*1 , even*/
+    background-color: darkslateblue;
+}
+
+ul li:nth-child(2n+1){ /*calculate 2*+1 , odd*/
+    background-color:springgreen
+}
+
+ui li:last-child{
+  font-weight: bold;
+}
+
+/* #banner {
+    display: none;
+} */
+
+ /*cotent is mandatory property , if not exists it disapprears from UI
+  pseudo elements cannot tagated from Javascript, beacuse its fake , pseudo
+ */
+#banner::before{
+    content: '⛪';
+}
+
+#banner::after{
+    /* content: 'Bye world'; */
+    content: attr(data-msg);
+}
+
+/*taget pseudo element, keep pseudo selector first*/
+
+#banner:hover::after{
+    text-transform: uppercase;
+}
+
+input:focus + #banner {
+    display: block;
+}
+
+/*immedidate sibling*/
+h1 ~ p {
+    color: greenyellow;
+}

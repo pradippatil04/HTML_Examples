@@ -1,0 +1,24 @@
+#container{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top:0px;
+    background-color: red;
+    animation: toggle 2000ms ease-out infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes toggle {
+    0%{
+        background-color: red;
+        top: 0px;
+    }
+    50%{
+        background-color: royalblue;
+        top: 200px;
+    }
+    100%{
+        background-color: red;
+        top: 0px;
+    }
+}
